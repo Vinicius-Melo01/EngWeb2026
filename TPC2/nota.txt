@@ -1,0 +1,14 @@
+Oficina:
+
+- Criar um json server com o dataset de reparacoes.db
+- Criar um servidor aplicacional para responder aos seguintes serviços:
+    1. /reparacoes      --> Tabela HTML com os dados 
+    2. /intervencoes    --> Tabela HTML com os diferentes tipos de intervencao realizados (sem repeticoes) e com o numero de vezes que foram feitos.
+    3. /viaturas        --> Tabela HTML com os dados dos tipo de viaturas intervencionadas (sem repeticoes) e o numero de vezes que cada modelo foi reparado.
+
+
+
+Como rodar:
+1. Executar json-server com "json-server --watch dataset_reparacoes.json"
+2. Executar servidor com "node server.js"
+3. Testar os endpoints no browser ou com "curl http://localhost:7777/reparacoes"
