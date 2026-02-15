@@ -48,12 +48,35 @@ createServer(async function (req, res) {
                 let numB = parseInt(b.codigo.substring(1));  // R008 -> 8
                 return numA - numB;
             })
-            let html = gerarPaginaIntervencoesUnicas(intervencoesSorted);
+            let html = gerarPaginaIntervencoes(intervencoesSorted);
             res.end(html);
         }
         else if(path === '/viaturas')
         {
-            res.end('<h1>Viaturas - Em construção</h1>');
+            let response = await axios.get(`${JSON_SERVER}/reparacoes`);
+            let reparacoes = response.data;
+     
+            let mapaViaturas = new Map();
+            
+            reparacoes.forEach(rep => {
+                let viat = rep.viatura;
+                if (!mapaViaturas.has(viat.matricula)) {
+                    mapaViaturas.set(viat.matricula, {
+                        matricula: viat.matricula,
+                        modelo: viat.modelo,
+                        marca: viat.marca,
+                        ocorrencias: 1
+                    });
+                } 
+                else 
+                {
+                    mapaViaturas.get(viat.matricula).ocorrencias++;
+                }
+                });
+
+            let viaturas = Array.from(mapaViaturas.values());
+            let html = gerarPaginaViaturas(viaturas);
+            res.end(html);
         }
         else
         {
@@ -129,7 +152,7 @@ function gerarPaginaReparacoes(reparacoesData){
     return html;
 }
 
-function gerarPaginaIntervencoesUnicas(intervencoes){
+function gerarPaginaIntervencoes(intervencoes){
     let titulo = "Intervenções"
     let linhas = intervencoes.map(i =>`
     <tr>
@@ -155,6 +178,46 @@ function gerarPaginaIntervencoesUnicas(intervencoes){
                         <th>Nome</th>
                         <th>Descrição</th>
                         <th>Nr de Ocorrências</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${linhas}
+                </tbody>
+            </table>
+        </body>
+    </html>
+    `
+
+    return html;
+}
+
+
+function gerarPaginaViaturas(viaturas){
+    let titulo = "Viaturas"
+    let linhas = viaturas.map(v => `
+    <tr>
+        <td>${v.matricula}</td>
+        <td>${v.marca}</td>
+        <td>${v.modelo}</td>
+        <td>${v.ocorrencias}</td>
+    </tr>
+    `).join('')
+
+    let html = `
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>${titulo}</title>
+        </head>
+        <body>
+            <h1>${titulo}</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Matrícula</th>
+                        <th>Nr de Reparações</th>
                     </tr>
                 </thead>
                 <tbody>
