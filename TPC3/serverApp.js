@@ -34,8 +34,7 @@ var myServer = http.createServer(async function (req,res) {
             //----- PAGINA DE ALUNOS ------
             else if (req.url == "/alunos"){
                 try{
-                    var resp = await axios.get(`http://localhost:3000/alunos`)
-                    var alunos = resp.data
+                    var alunos = await ut.getAlunos()
                     var alunosLink = ""
                     alunos.forEach(a => {
                         alunosLink += `
@@ -120,8 +119,7 @@ var myServer = http.createServer(async function (req,res) {
             {
                 try
                 {
-                    var resp = await axios.get('http://localhost:3000/instrumentos')
-                    var instrumentos = resp.data
+                    var instrumentos = await ut.getInstrumentos()
                     var instrumentosLink = ""
                     instrumentos.forEach(ins => {
                         instrumentosLink += `
