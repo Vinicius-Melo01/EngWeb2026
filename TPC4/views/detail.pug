@@ -1,0 +1,43 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 Detalhes do EMD
+    
+    .w3-container.w3-padding
+      p
+        strong Data EMD: 
+        | #{emd.dataEMD}
+      p
+        strong Nome: 
+        | #{emd.nomePrimeiro} #{emd.nomeUltimo}
+      p
+        strong Idade: 
+        | #{emd.idade}
+      p
+        strong Género: 
+        | #{emd.género}
+      p
+        strong Morada: 
+        | #{emd.morada}
+      p
+        strong Modalidade: 
+        | #{emd.modalidade}
+      p
+        strong Clube: 
+        | #{emd.clube}
+      p
+        strong Email: 
+        | #{emd.email}
+      p
+        strong Federado: 
+        | #{emd.federado ? 'Sim' : 'Não'}
+      p
+        strong Resultado: 
+        | #{emd.resultado ? 'Aprovado' : 'Reprovado'}
+      
+      p
+        a.w3-btn.w3-blue-grey(href=`/emd/editar/${emd.id}`) Editar
+        a.w3-btn.w3-red.w3-margin-left(href=`/emd/apagar/${emd.id}`) Apagar
+        a.w3-btn.w3-grey.w3-margin-left(href="/") Voltar à Lista

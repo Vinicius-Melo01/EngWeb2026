@@ -1,0 +1,56 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-purple
+      h2= emd ? "Editar Registo EMD" : "Novo Registo EMD"
+      //emd vindo do renderFile() em template.js
+    
+    form.w3-container.w3-padding-16(method="POST" action=emd ? `/emd/${emd.id}` : "/emd")
+      fieldset
+        legend Dados do Exame Médico Desportivo
+        
+        if emd
+          input(type="hidden" name="id" value=emd.id)
+          input(type="hidden" name="index" value=emd.index)
+        
+        label Data EMD
+        input.w3-input.w3-round(type="date" name="dataEMD" value=emd ? emd.dataEMD : "" required)
+        
+        label Primeiro Nome
+        input.w3-input.w3-round(type="text" name="nomePrimeiro" value=emd ? emd.nomePrimeiro : "" required)
+        
+        label Último Nome
+        input.w3-input.w3-round(type="text" name="nomeUltimo" value=emd ? emd.nomeUltimo : "" required)
+        
+        label Idade
+        input.w3-input.w3-round(type="number" name="idade" min="1" max="120" value=emd ? emd.idade : "" required)
+        
+        label Género
+        select.w3-select.w3-round(name="género" required)
+          option(value="" disabled selected=!emd) Selecione...
+          option(value="M" selected=emd && emd.género === "M") Masculino
+          option(value="F" selected=emd && emd.género === "F") Feminino
+        
+        label Morada
+        input.w3-input.w3-round(type="text" name="morada" value=emd ? emd.morada : "" required)
+        
+        label Modalidade
+        input.w3-input.w3-round(type="text" name="modalidade" value=emd ? emd.modalidade : "" required)
+        
+        label Clube
+        input.w3-input.w3-round(type="text" name="clube" value=emd ? emd.clube : "" required)
+        
+        label Email
+        input.w3-input.w3-round(type="email" name="email" value=emd ? emd.email : "" required)
+        
+        label 
+          input.w3-check(type="checkbox" name="federado" value="true" checked=emd && emd.federado)
+          |  Federado
+        
+        label 
+          input.w3-check(type="checkbox" name="resultado" value="true" checked=emd && emd.resultado)
+          |  Resultado Aprovado
+      
+      button.w3-btn.w3-purple.w3-margin-top(type="submit")= emd ? "Atualizar" : "Inserir"
+      a.w3-btn.w3-grey.w3-margin-top.w3-margin-left(href="/") Cancelar
