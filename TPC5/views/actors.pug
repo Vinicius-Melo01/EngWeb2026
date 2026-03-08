@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  .w3-card-4
+    header.w3-container.w3-teal
+      h1 Lista de Actores 
+    
+    .w3-container
+  table.w3-table-all.w3-margin-top
+    tr
+      th Nome do Ator
+      th 
+        a(href='/filmes') Filmes
+    each l in list
+      tr
+        td= l.nome
+        td
+            ul
+                each f in l.filmes
+                    li= f.title
+                
+
