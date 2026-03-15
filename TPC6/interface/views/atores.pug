@@ -1,0 +1,16 @@
+extends layout.pug
+
+block content
+  .w3-container
+    h2 Lista de Atores (#{atores.length})
+    table.w3-table-all
+      tr.w3-teal
+        th Id
+        th Nome
+        th Nº Filmes
+      each a in atores
+        tr
+          td= a.id
+          td
+            a(href="/atores/" + a._id)= a.nome
+          td= a.numFilmes

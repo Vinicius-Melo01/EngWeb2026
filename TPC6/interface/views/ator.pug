@@ -1,0 +1,10 @@
+extends layout.pug
+
+block content
+  .w3-container
+    h2= `Filmes do ator ${ator.nome}`
+    ul
+      each f in filmes
+        li= f.title
+    
+    a(href="/atores/") Voltar

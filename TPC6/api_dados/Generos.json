@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "nome": "Comedy"
+  },
+  {
+    "id": 2,
+    "nome": "Family"
+  },
+  {
+    "id": 3,
+    "nome": "Drama"
+  },
+  {
+    "id": 4,
+    "nome": "Science Fiction"
+  },
+  {
+    "id": 5,
+    "nome": "Thriller"
+  },
+  {
+    "id": 6,
+    "nome": "Documentary"
+  },
+  {
+    "id": 7,
+    "nome": "Western"
+  },
+  {
+    "id": 8,
+    "nome": "Crime"
+  },
+  {
+    "id": 9,
+    "nome": "Action"
+  },
+  {
+    "id": 10,
+    "nome": "Romance"
+  },
+  {
+    "id": 11,
+    "nome": "Satire"
+  },
+  {
+    "id": 12,
+    "nome": "Adventure"
+  },
+  {
+    "id": 13,
+    "nome": "Biography"
+  },
+  {
+    "id": 14,
+    "nome": "Horror"
+  },
+  {
+    "id": 15,
+    "nome": "Musical"
+  },
+  {
+    "id": 16,
+    "nome": "Historical"
+  },
+  {
+    "id": 17,
+    "nome": "Animated"
+  },
+  {
+    "id": 18,
+    "nome": "Fantasy"
+  },
+  {
+    "id": 19,
+    "nome": "War"
+  },
+  {
+    "id": 20,
+    "nome": "Mystery"
+  },
+  {
+    "id": 21,
+    "nome": "Short"
+  },
+  {
+    "id": 22,
+    "nome": "Superhero"
+  },
+  {
+    "id": 23,
+    "nome": "Performance"
+  },
+  {
+    "id": 24,
+    "nome": "Sports"
+  },
+  {
+    "id": 25,
+    "nome": "Live Action"
+  },
+  {
+    "id": 26,
+    "nome": "Disaster"
+  },
+  {
+    "id": 27,
+    "nome": "Teen"
+  },
+  {
+    "id": 28,
+    "nome": "Suspense"
+  },
+  {
+    "id": 29,
+    "nome": "Noir"
+  },
+  {
+    "id": 30,
+    "nome": "Political"
+  },
+  {
+    "id": 31,
+    "nome": "Silent"
+  },
+  {
+    "id": 32,
+    "nome": "Spy"
+  },
+  {
+    "id": 33,
+    "nome": "Dance"
+  },
+  {
+    "id": 34,
+    "nome": "Martial Arts"
+  },
+  {
+    "id": 35,
+    "nome": "Supernatural"
+  },
+  {
+    "id": 36,
+    "nome": "Legal"
+  },
+  {
+    "id": 37,
+    "nome": "Independent"
+  },
+  {
+    "id": 38,
+    "nome": "Erotic"
+  },
+  {
+    "id": 39,
+    "nome": "Slasher"
+  },
+  {
+    "id": 40,
+    "nome": "Found Footage"
+  }
+]

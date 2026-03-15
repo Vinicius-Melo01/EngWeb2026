@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+  .w3-container
+    h2= filme.title
+    p Ano: #{filme.year}
+    
+    h3 
+        a(href='/atores') Atores
+    ul
+      each a in atores
+        li= a.nome
+    
+    h3 Géneros
+    ul
+      each g in generos
+        li= g.nome
+    
+    a(href="/filmes") Voltar
