@@ -3,7 +3,7 @@
 ### Por:
 - Vinicius Melo (A101926)
 
-### Como rodar:
+### Como executar:
 1. Executar json-server com "json-server --watch dataset_reparacoes.json"
 2. Instalar módulo do axios com "npm i axios"
 3. Executar servidor com "node server.js"
