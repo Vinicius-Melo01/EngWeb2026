@@ -1,6 +1,0 @@
-a persistência de dados, do setup de bases de dados, de como importou a informação na base
-de dados, respostas textuais pedidas, instruções de como executar as aplicações
-desenvolvidas, etc...
-
-A persistência de dados foi feita ao moficiar a base de dados em JSON e inseri-la no mongoDB com o auxilio do ficheiro mongo-init/import.sh.
-Para executar as aplicações desenvolvidas foi feito o comando "sudo docker compose up -d --build" para construir todos os containers, e a seguir fez-se "sudo docker logs interface_reparacoes" para iniciar a interface. Finalmente, após feito isso, foi acedido ao endereço "http://localhost:16026"

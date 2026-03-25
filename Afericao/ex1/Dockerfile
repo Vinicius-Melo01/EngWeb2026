@@ -1,7 +1,0 @@
-FROM node:22
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-EXPOSE 16025
-CMD ["node", "my_server.js"]
