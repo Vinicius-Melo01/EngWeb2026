@@ -1,0 +1,29 @@
+extends layout.pug
+
+block content
+  .w3-container
+    h2 Reparação ##{repair.id}
+    
+    p Nome: #{repair.nome}
+    p NIF: #{repair.nif}
+    p Data: #{repair.data}
+    
+    h3 Viatura
+    p Marca: 
+      a(href="/marca/" + repair.viatura.marca)= repair.viatura.marca
+    p Modelo: #{repair.viatura.modelo}
+    p Matrícula: #{repair.viatura.matricula}
+    
+    h3 Intervenções (#{repair.nr_intervencoes})
+    table.w3-table-all
+      tr.w3-teal
+        th Código
+        th Nome
+        th Descrição
+      each i in repair.intervencoes
+        tr
+          td= i.codigo
+          td= i.nome
+          td= i.descricao
+    
+    a(href="/") Voltar
