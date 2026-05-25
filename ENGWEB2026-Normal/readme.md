@@ -76,19 +76,19 @@ Disponível em: `http://localhost:17000/api-docs`
 
 ### Exemplos de rotas
 
-- Listar jogos
+- Listar jogos: 
 curl http://localhost:17000/jogos
 
-- Detalhe de um jogo
+- Detalhe de um jogo: 
 curl http://localhost:17000/jogos/catan
 
-- Filtrar por editora
+- Filtrar por editora: 
 curl http://localhost:17000/jogos?editora=KOSMOS
 
-- Listar autores
+- Listar autores: 
 curl http://localhost:17000/autores
 
-- Listar categorias
+- Listar categorias: 
 curl http://localhost:17000/categorias
 
 ---
