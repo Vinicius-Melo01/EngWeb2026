@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "^5.2.1",
+    "mongoose": "^9.2.4",
+    "swagger-ui-express": "^5.0.0",
+    "swagger-jsdoc": "^6.2.8"
+  }
+}
