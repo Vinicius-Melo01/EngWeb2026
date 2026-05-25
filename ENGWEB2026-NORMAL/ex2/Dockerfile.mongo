@@ -1,3 +1,0 @@
-FROM mongo:latest
-COPY dataset.json /docker-entrypoint-initdb.d/
-COPY mongo-init/import.sh /docker-entrypoint-initdb.d/

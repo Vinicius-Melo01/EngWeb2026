@@ -1,9 +1,0 @@
-[
-  { "titulo": "O Senhor dos Anéis", "autor": "J.R.R. Tolkien", "paginas": 1178, "genero": "Fantasia", "lido": true },
-  { "titulo": "Duna", "autor": "Frank Herbert", "paginas": 688, "genero": "Ficção Científica", "lido": false },
-  { "titulo": "1984", "autor": "George Orwell", "paginas": 328, "genero": "Distopia", "lido": true },
-  { "titulo": "O Nome da Rosa", "autor": "Umberto Eco", "paginas": 502, "genero": "Mistério", "lido": false },
-  { "titulo": "Cem Anos de Solidão", "autor": "Gabriel García Márquez", "paginas": 448, "genero": "Realismo Mágico", "lido": false },
-  { "titulo": "O Apanhador no Campo de Centeio", "autor": "J.D. Salinger", "paginas": 214, "genero": "Ficção", "lido": true },
-  { "titulo": "Crime e Castigo", "autor": "Fiódor Dostoiévski", "paginas": 671, "genero": "Romance", "lido": false }
-]
